@@ -8,7 +8,6 @@ class PepSpider(scrapy.Spider):
     (Python Enhancement Proposals) с peps.python.org.
     """
     name = "pep"
-    allowed_domains = ["peps.python.org"]
     start_urls = ["https://peps.python.org/"]
 
     def parse(self, response):
@@ -27,8 +26,12 @@ class PepSpider(scrapy.Spider):
         """
         page = response.css('section[id=pep-page-section]')
         h1_title = response.css('h1.page-title::text').get()
+
+        number_text = page.css('li strong::text').re_first(r'PEP\s*(\d+)')
+        number = int(number_text) if number_text.isdigit() else None
+
         data = {
-            'number': int(page.css('li::text')[2].get().replace('PEP ', '')),
+            'number': number,
             'name': h1_title.partition('– ')[2],
             'status': response.css('dt:contains("Status") + dd ::text').get()
         }

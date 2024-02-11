@@ -2,6 +2,8 @@ import csv
 import datetime as dt
 from pathlib import Path
 
+from constants import RESULTS_DIR
+
 BASE_DIR = Path(__file__).parent.parent
 
 
@@ -19,8 +21,8 @@ class PepParsePipeline:
 
     def close_spider(self, spider):
         now = dt.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        filename = BASE_DIR / 'results' / f'status_summary_{now}.csv'
-        heading = ('Статус', 'Количество')
+        filename = BASE_DIR / RESULTS_DIR / f'status_summary_{now}.csv'
+        heading = ('Status', 'Quantity')
         total = 'Всего'
         with open(filename, mode='w', encoding='utf-8') as f:
             writer = csv.writer(f)
