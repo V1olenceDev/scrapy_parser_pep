@@ -2,7 +2,7 @@ import csv
 import datetime as dt
 from pathlib import Path
 
-from constants import RESULTS_DIR
+from settings import RESULTS_DIR
 
 BASE_DIR = Path(__file__).parent.parent
 

@@ -1,3 +1,4 @@
+import re
 import scrapy
 from pep_parse.items import PepParseItem
 
@@ -32,7 +33,7 @@ class PepSpider(scrapy.Spider):
 
         data = {
             'number': number,
-            'name': h1_title.partition('– ')[2],
+            'name': re.search(r'^(.+?)(?: – .*)?', h1_title).group(1),
             'status': response.css('dt:contains("Status") + dd ::text').get()
         }
         yield PepParseItem(data)
