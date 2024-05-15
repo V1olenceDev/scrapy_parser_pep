@@ -15,16 +15,11 @@ git clone git@github.com:V1olenceDev/scrapy_parser_pep.git
 ```
 Установите и активируйте виртуальное окружение:
 
-- *для MacOS:*
-    ```commandline
-    python -m venv venv
-    ```
-- *для Windows:*
-    ```commandline
-    python -m venv venv
-    . venv/Scripts/activate
-    source venv/Scripts/activate
-    ```
+```commandline
+python -m venv venv
+source venv/Scripts/activate
+```
+
 Установите зависимости из файла requirements.txt:
 ```commandline
 pip install -r requirements.txt
