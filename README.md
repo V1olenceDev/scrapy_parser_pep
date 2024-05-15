@@ -17,7 +17,7 @@ git clone git@github.com:V1olenceDev/scrapy_parser_pep.git
 
 ```commandline
 python -m venv venv
-source venv/Scripts/activate
+. venv/Scripts/activate
 ```
 
 Установите зависимости из файла requirements.txt:
