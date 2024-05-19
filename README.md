@@ -31,7 +31,7 @@ python -m venv venv
 . venv/Scripts/activate
 ```
 
-Установите зависимости из файла requirements.txt:
+Установите зависимости из файла `requirements.txt`:
 
 ```
 python -m pip install --upgrade pip
@@ -46,8 +46,8 @@ pip install -r requirements.txt
 scrapy crawl pep 
 ```
 Результаты будут сохранены в папке results
-- в файле pep_<date>.csv находится информация по всем PEP (их номер, название и статус)
-- в файле status_summary_<date>.csv находится информация о колличестве статусов PEP
+- в файле `pep_<date>.csv` находится информация по всем PEP (их номер, название и статус)
+- в файле `status_summary_<date>.csv` находится информация о колличестве статусов PEP
 
 
 ## Автор
