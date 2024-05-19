@@ -13,27 +13,35 @@
 ### Как запустить проект:
 
 Клонировать репозиторий и перейти в него в командной строке:
-```commandline
+```
 git clone git@github.com:V1olenceDev/scrapy_parser_pep.git
 ```
 
-Установите и активируйте виртуальное окружение:
-```commandline
+```
+cd scrapy_parser_pep
+```
+
+Cоздать и активировать виртуальное окружение:
+
+```
 python -m venv venv
+```
+
+```
 . venv/Scripts/activate
 ```
 
-Установите зависимости из файла requirements.txt:
-```commandline
+Установить зависимости из файла requirements.txt:
+
+```
+python -m pip install --upgrade pip
+```
+
+```
 pip install -r requirements.txt
 ```
 
-### Использование:
-Для запуска парсера необходимо перейти в папку pep_parse:
-```commandline
-cd scrapy_parser_pep
-```
-И выполнить команду:
+Выполнить команду:
 ```commandline
 scrapy crawl pep 
 ```
