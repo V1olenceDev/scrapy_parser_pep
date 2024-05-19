@@ -1,7 +1,5 @@
 # Парсер Python.org
 
-![workflows](https://github.com/ThatCoderMan/scrapy_parser_pep/actions/workflows/workflow.yml/badge.svg)
-
 ### Описание
 Данный код представляет собой асинхронный парсер документации Python 
 при помощи библиотеки **scrapy**. Он предоставляет возможность получить 
